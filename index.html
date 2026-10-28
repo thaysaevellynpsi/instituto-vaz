@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instituto Vaz | Psicologia e Saúde: psicoterapia online para mães e mulheres</title>
+<meta name="description" content="Psicoterapia online a partir de 15 anos, com escuta cuidadosa para mães, mulheres e todas as pessoas que procuram um espaço para si. De qualquer lugar do Brasil ou do mundo.">
+<meta property="og:title" content="Instituto Vaz | Psicologia e Saúde">
+<meta property="og:description" content="Psicoterapia online a partir de 15 anos, com escuta cuidadosa para cada história.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#F7F3ED">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --marfim:#F7F3ED;
+  --areia:#DCCBB8;
+  --rose:#B98278;
+  --terracota:#A96758;
+  --cacau:#59463E;
+  --areia-clara:#EFE6DA;
+  --radius:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{
+  font-family:'Montserrat',system-ui,sans-serif;
+  background:var(--marfim);
+  color:var(--cacau);
+  line-height:1.65;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;line-height:1.12;color:var(--cacau)}
+h1{font-size:clamp(2.3rem,7.2vw,3.9rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.9rem,5.4vw,2.8rem);letter-spacing:-.005em}
+h3{font-size:1.5rem}
+em{font-style:italic;color:var(--terracota)}
+.container{width:100%;max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:68px 0}
+.eyebrow{
+  display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--rose);margin-bottom:14px
+}
+.lead{font-size:1.05rem;max-width:620px}
+.center{text-align:center}
+.center .lead{margin-left:auto;margin-right:auto}
+
+/* Botões */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  background:var(--terracota);color:#fff;text-decoration:none;
+  font-weight:600;font-size:1.02rem;padding:16px 28px;border-radius:999px;
+  border:2px solid var(--terracota);
+  transition:background .2s,transform .2s,border-color .2s;
+  text-align:center
+}
+.btn:hover{background:var(--cacau);border-color:var(--cacau);transform:translateY(-1px)}
+.btn:focus-visible,.link-sec:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--cacau);outline-offset:3px}
+.btn-outline{background:transparent;color:var(--cacau);border-color:var(--cacau)}
+.btn-outline:hover{background:var(--cacau);color:var(--marfim)}
+.btn-sm{padding:10px 20px;font-size:.9rem}
+.link-sec{
+  font-weight:600;color:var(--cacau);text-decoration:underline;
+  text-decoration-color:var(--rose);text-underline-offset:5px;text-decoration-thickness:2px
+}
+.link-sec:hover{color:var(--terracota)}
+
+/* 1. Topo fixo */
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(247,243,237,.94);backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(89,70,62,.1)
+}
+.topbar .container{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{
+  width:42px;height:42px;border-radius:50%;
+  border:1.5px solid var(--rose);display:grid;place-items:center;
+  font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.2rem;color:var(--cacau);
+  letter-spacing:.04em
+}
+.logo-text{display:flex;flex-direction:column;line-height:1.1}
+.logo-text b{font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-weight:700;letter-spacing:.14em;color:var(--cacau)}
+.logo-text small{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rose);font-weight:500}
+.topnav{display:none;gap:26px}
+.topnav a{text-decoration:none;font-size:.88rem;font-weight:500}
+.topnav a:hover{color:var(--terracota)}
+@media(min-width:900px){.topnav{display:flex}}
+
+/* 2. Hero */
+.hero{padding:132px 0 76px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;right:-140px;top:40px;width:420px;height:420px;border-radius:50%;
+  background:var(--areia);opacity:.55;z-index:0
+}
+.hero::after{
+  content:"";position:absolute;right:60px;top:300px;width:150px;height:150px;border-radius:50%;
+  border:1.5px solid var(--rose);opacity:.6;z-index:0
+}
+.hero .container{position:relative;z-index:1}
+.seal{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--areia-clara);border:1px solid var(--areia);
+  color:var(--cacau);font-size:.8rem;font-weight:600;
+  padding:8px 16px;border-radius:999px;margin-bottom:26px
+}
+.seal i{width:8px;height:8px;border-radius:50%;background:var(--terracota);display:block}
+.hero h1{max-width:760px;margin-bottom:22px}
+.hero .lead{margin-bottom:34px;font-size:1.1rem}
+.cta-row{display:flex;flex-direction:column;align-items:flex-start;gap:20px}
+@media(min-width:560px){.cta-row{flex-direction:row;align-items:center;gap:30px}}
+.proof{
+  margin-top:38px;padding-top:22px;border-top:1px solid rgba(89,70,62,.15);
+  display:flex;flex-wrap:wrap;gap:10px 26px;font-size:.88rem;max-width:640px
+}
+.proof span{display:flex;align-items:center;gap:8px}
+.proof span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--rose)}
+
+/* 3. Identificação */
+.pain{background:var(--areia-clara)}
+.pain-head{max-width:700px;margin-bottom:40px}
+.pain-head p{margin-top:18px;font-size:1.05rem}
+.signs{list-style:none;display:grid;gap:14px}
+@media(min-width:760px){.signs{grid-template-columns:1fr 1fr}}
+.signs li{
+  background:var(--marfim);border-radius:var(--radius);padding:22px 22px 22px 58px;
+  position:relative;border:1px solid rgba(89,70,62,.08)
+}
+.signs li::before{
+  content:"";position:absolute;left:22px;top:28px;width:18px;height:18px;border-radius:50%;
+  border:2px solid var(--rose);background:var(--marfim)
+}
+.signs li::after{
+  content:"";position:absolute;left:28px;top:34px;width:6px;height:6px;border-radius:50%;background:var(--terracota)
+}
+.pain-close{margin-top:38px;max-width:680px}
+.pain-close p{font-family:'Cormorant Garamond',serif;font-size:1.55rem;line-height:1.3;font-weight:500;margin-bottom:26px}
+
+/* 4. Atendimentos */
+.cards{display:grid;gap:20px;margin-top:40px}
+@media(min-width:760px){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  background:#fff8f0;border:1px solid var(--areia);border-radius:var(--radius);
+  padding:34px 28px;display:flex;flex-direction:column;gap:12px
+}
+.card .tag{
+  align-self:flex-start;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--terracota);background:var(--areia-clara);padding:6px 12px;border-radius:999px
+}
+.card h3{font-size:1.65rem}
+
+/* 5. Diferencial */
+.diff{background:var(--cacau);color:var(--marfim)}
+.diff h2{color:var(--marfim)}
+.diff em{color:var(--areia)}
+.diff .eyebrow{color:var(--areia)}
+.diff-grid{display:grid;gap:40px;align-items:start}
+@media(min-width:900px){.diff-grid{grid-template-columns:5fr 6fr;gap:64px}}
+.diff p.lead{margin-top:18px;color:var(--areia-clara)}
+.checks{list-style:none;display:grid;gap:14px}
+.checks li{
+  display:flex;gap:14px;align-items:flex-start;
+  padding:16px 18px;border-radius:14px;background:rgba(247,243,237,.07)
+}
+.checks li::before{
+  content:"";flex:0 0 22px;height:22px;border-radius:50%;margin-top:2px;
+  background:var(--rose) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F7F3ED' stroke-width='3.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center/13px no-repeat
+}
+.diff .btn{margin-top:34px;background:var(--rose);border-color:var(--rose);color:var(--cacau)}
+.diff .btn:hover{background:var(--marfim);border-color:var(--marfim)}
+
+/* 6. Equipe */
+.team-box{
+  background:var(--areia-clara);border-radius:26px;padding:42px 26px;
+  display:grid;gap:30px;align-items:center
+}
+@media(min-width:860px){.team-box{grid-template-columns:5fr 6fr;padding:56px 52px;gap:56px}}
+.team-visual{display:flex;gap:-10px;align-items:center;justify-content:center;min-height:170px}
+.team-visual span{
+  width:96px;height:96px;border-radius:50%;margin:0 -12px;border:4px solid var(--areia-clara);
+}
+.team-visual span:nth-child(1){background:var(--areia)}
+.team-visual span:nth-child(2){background:var(--rose);opacity:.85}
+.team-visual span:nth-child(3){background:var(--terracota);opacity:.8}
+.team-visual span:nth-child(4){background:var(--cacau);opacity:.85}
+.team-box p{margin-top:16px}
+.team-box .btn{margin-top:26px}
+
+/* 7. Por que online */
+.why{background:var(--areia-clara)}
+.why-grid{display:grid;gap:18px;margin-top:40px}
+@media(min-width:640px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1000px){.why-grid{grid-template-columns:repeat(4,1fr)}}
+.why-card{background:var(--marfim);border-radius:var(--radius);padding:28px 22px;border:1px solid rgba(89,70,62,.08)}
+.why-card .ico{
+  width:46px;height:46px;border-radius:50%;background:var(--areia);display:grid;place-items:center;margin-bottom:16px
+}
+.why-card .ico svg{width:22px;height:22px;stroke:var(--cacau);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.why-card h3{font-size:1.35rem;margin-bottom:8px}
+.why-card p{font-size:.95rem}
+
+/* 8. Como funciona */
+.steps{list-style:none;display:grid;gap:18px;margin-top:40px;counter-reset:s}
+@media(min-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
+.steps li{
+  counter-increment:s;background:#fff8f0;border:1px solid var(--areia);border-radius:var(--radius);
+  padding:30px 26px;position:relative
+}
+.steps li::before{
+  content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;
+  background:var(--terracota);color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin-bottom:16px
+}
+.steps h3{font-size:1.4rem;margin-bottom:8px}
+
+/* 9. FAQ */
+.faq{background:var(--areia-clara)}
+.faq-list{max-width:780px;margin:40px auto 0;display:grid;gap:12px}
+details{background:var(--marfim);border-radius:14px;border:1px solid rgba(89,70,62,.1);overflow:hidden}
+summary{
+  list-style:none;cursor:pointer;padding:20px 56px 20px 22px;font-weight:600;font-size:1rem;position:relative
+}
+summary::-webkit-details-marker{display:none}
+summary::after{
+  content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);
+  font-size:1.6rem;font-weight:400;color:var(--terracota);line-height:1
+}
+details[open] summary::after{content:"–"}
+details[open] summary{color:var(--terracota)}
+details p{padding:0 22px 22px;max-width:660px}
+
+/* 10. Chamada final */
+.final{text-align:center;padding:84px 0}
+.final-box{
+  background:var(--areia);border-radius:30px;padding:60px 24px;position:relative;overflow:hidden
+}
+.final-box::before{
+  content:"";position:absolute;left:-60px;bottom:-80px;width:240px;height:240px;border-radius:50%;
+  border:1.5px solid var(--rose);opacity:.7
+}
+.final-box > *{position:relative}
+.final-box h2{max-width:640px;margin:0 auto 18px}
+.final-box p{max-width:520px;margin:0 auto 30px}
+.final-box .cta-row{justify-content:center;align-items:center;flex-direction:column;gap:14px}
+@media(min-width:560px){.final-box .cta-row{flex-direction:row;gap:16px}}
+
+/* 11. Rodapé */
+footer{background:var(--cacau);color:var(--areia-clara);padding:56px 0 30px;font-size:.92rem}
+.foot-grid{display:grid;gap:34px}
+@media(min-width:760px){.foot-grid{grid-template-columns:1.4fr 1fr 1fr}}
+footer .logo-text b,footer .logo-mark{color:var(--marfim)}
+footer .logo-mark{border-color:var(--rose)}
+footer h4{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--areia);margin-bottom:14px;font-weight:600}
+footer ul{list-style:none;display:grid;gap:9px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--marfim);text-decoration:underline}
+footer p.about{margin-top:16px;max-width:320px}
+.legal{
+  margin-top:40px;padding-top:22px;border-top:1px solid rgba(247,243,237,.15);
+  font-size:.8rem;color:var(--areia);display:grid;gap:6px
+}
+.ph{background:rgba(185,130,120,.35);padding:1px 6px;border-radius:4px;color:var(--marfim)}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .btn{transition:none}
+}
+</style>
+</head>
+<body>
+
+<!-- 1. TOPO FIXO -->
+<header class="topbar">
+  <div class="container">
+    <a class="logo" href="#topo" aria-label="Instituto Vaz | Psicologia e Saúde">
+      <span class="logo-mark" aria-hidden="true">IV</span>
+      <span class="logo-text"><b>VAZ</b><small>Instituto · Psicologia e Saúde</small></span>
+    </a>
+    <nav class="topnav" aria-label="Navegação principal">
+      <a href="#sinais">Você se reconhece?</a>
+      <a href="#atendimentos">Atendimentos</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-sm" href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20com%20o%20Instituto%20Vaz." target="_blank" rel="noopener">Falar com o Instituto</a>
+  </div>
+</header>
+
+<main id="topo">
+
+<!-- 2. HERO -->
+<section class="hero">
+  <div class="container">
+    <span class="seal"><i></i>Atendimento 100% online</span>
+    <h1>Você está cansada da rotina ou de sentir que <em>tudo depende de você?</em></h1>
+    <p class="lead">Psicoterapia online para mães e mulheres que cuidam de tudo e de todos, e deixam o próprio cuidado para depois. Um espaço de escuta, no seu horário, sem precisar sair de casa.</p>
+    <div class="cta-row">
+      <a class="btn" href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20com%20o%20Instituto%20Vaz." target="_blank" rel="noopener">Quero conversar com o Instituto Vaz</a>
+      <a class="link-sec" href="#sinais">Quero ler mais antes de decidir</a>
+    </div>
+    <!-- Linha de prova social: usei só fatos que você confirmou. Se quiser acrescentar número de pacientes ou avaliação do Google, confirme antes se as normas do CFP/CRP permitem divulgar. -->
+    <div class="proof">
+      <span>Equipe de psicólogas</span>
+      <span>Sigilo e acolhimento</span>
+      <span>De qualquer lugar do Brasil ou do mundo</span>
+    </div>
+  </div>
+</section>
+
+<!-- BLOCOS DE VÍDEO E DEPOIMENTOS: não incluídos por enquanto.
+     Vídeo: ainda não existe.
+     Depoimentos: aguardando confirmação sobre o que as normas do CFP permitem divulgar.
+     Se forem incluídos, ficam aqui, entre o hero e o bloco de identificação. -->
+
+<!-- 3. IDENTIFICAÇÃO COM A DOR -->
+<section class="pain" id="sinais">
+  <div class="container">
+    <div class="pain-head">
+      <span class="eyebrow">Você se reconhece?</span>
+      <h2>Você tem uma vida boa. Então por que está sendo <em>tão pesado?</em></h2>
+      <p>Se você se sente assim, não é falta de organização, de disciplina nem de gratidão. Quem carrega quase tudo sozinha cansa, e cansar não é falha de caráter. Talvez seja só a hora de olhar para o que está acontecendo com você.</p>
+    </div>
+    <ul class="signs">
+      <li>O dia de trabalho acaba, mas o outro turno começa.</li>
+      <li>Se você não lembrar, ninguém lembra. Você é a agenda da casa inteira.</li>
+      <li>Perde a paciência por uma coisa pequena e se arrepende logo depois.</li>
+      <li>Ama ser mãe e, mesmo assim, às vezes só queria um tempo quieta, sozinha. E se sente culpada por isso.</li>
+      <li>Aparece uma hora livre e você não sabe o que fazer com ela. Nem do que gosta.</li>
+      <li>A cabeça não desliga: você deita e a lista de tarefas continua rodando.</li>
+    </ul>
+    <div class="pain-close">
+      <p>Se alguma dessas frases foi sua, você não está exagerando. E não precisa esperar tudo ficar insuportável para olhar para isso.</p>
+      <a class="btn" href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20com%20o%20Instituto%20Vaz." target="_blank" rel="noopener">Quero conversar</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ATENDIMENTOS -->
+<section id="atendimentos">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Atendimentos</span>
+      <h2>Um espaço para falar do que <em>você vive</em></h2>
+      <p class="lead">Psicoterapia individual, 100% online, com escuta cuidadosa para cada história.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <span class="tag">Mães, mulheres e gestantes</span>
+        <h3>Psicoterapia individual</h3>
+        <p>Acompanhamento psicológico para falar do que você vive e sente, inclusive do que dá vergonha ou culpa, sem ser julgada.</p>
+      </article>
+      <article class="card">
+        <span class="tag">A partir de 15 anos</span>
+        <h3>Psicoterapia para adolescentes</h3>
+        <p>Um espaço de escuta para quem está se entendendo, com acolhimento e respeito ao tempo de cada um.</p>
+      </article>
+    </div>
+    <p class="center" style="margin-top:28px">Não se encaixa em nenhum desses grupos? Você também pode falar com a gente. Atendemos todas as pessoas a partir de 15 anos.</p>
+  </div>
+</section>
+
+<!-- 5. DIFERENCIAL -->
+<section class="diff" id="diferencial">
+  <div class="container diff-grid">
+    <div>
+      <span class="eyebrow">Por que o Instituto Vaz</span>
+      <h2>Cuidado que cabe na sua rotina, <em>sem perder a profundidade</em></h2>
+      <p class="lead">Cada história é única. Por isso, o acompanhamento psicológico não é uma fórmula pronta: é um espaço profissional para compreender o que faz parte da sua história.</p>
+      <a class="btn" href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20com%20o%20Instituto%20Vaz." target="_blank" rel="noopener">Quero conversar com o Instituto</a>
+    </div>
+    <ul class="checks">
+      <li>Atendimento 100% online, sem deslocamento</li>
+      <li>Sigilo, qualidade, acolhimento e profundidade também no formato online</li>
+      <li>Equipe de psicólogas com formação e experiência em diferentes áreas</li>
+      <li>Planos que se ajustam à sua realidade</li>
+      <li>Atendimento para todas as pessoas a partir de 15 anos</li>
+      <li>Atendimento de qualquer lugar do Brasil ou do mundo</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 6. EQUIPE -->
+<section id="equipe">
+  <div class="container">
+    <div class="team-box">
+      <div class="team-visual" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+      <div>
+        <span class="eyebrow">Nossa equipe</span>
+        <h2>Profissionais que cuidam com <em>ética e atenção</em></h2>
+        <p>O Instituto Vaz conta com psicólogas com formação e experiência em diferentes áreas, para acolher diferentes demandas.</p>
+        <p>Atuamos de acordo com o Código de Ética Profissional do Psicólogo e com as normas do Conselho Federal de Psicologia. Para saber mais sobre a equipe, é só entrar em contato.</p>
+        <a class="btn btn-outline" href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20a%20equipe%20do%20Instituto%20Vaz." target="_blank" rel="noopener">Perguntar sobre a equipe</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. POR QUE ONLINE -->
+<section class="why">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Por que online</span>
+      <h2>O cuidado que você precisa, <em>onde você estiver</em></h2>
+      <p class="lead">Para quem não tem hora sobrando nem com quem deixar o filho, o atendimento online tira do caminho o que mais costuma adiar a decisão.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg></div>
+        <h3>Sem deslocamento</h3>
+        <p>Você participa de um lugar reservado da sua casa, sem trânsito nem tempo perdido.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/></svg></div>
+        <h3>Sigilo e acolhimento</h3>
+        <p>O mesmo sigilo, qualidade, acolhimento e profundidade de um atendimento presencial.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <h3>Dentro da sua rotina</h3>
+        <p>Sem precisar de alguém para ficar com seu filho nem reorganizar o dia inteiro.</p>
+      </div>
+      <div class="why-card">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14 14 0 010 18M12 3a14 14 0 000 18"/></svg></div>
+        <h3>De qualquer lugar</h3>
+        <p>Você pode ser atendida de qualquer lugar do Brasil ou do mundo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. COMO FUNCIONA -->
+<section id="como-funciona">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Começar é <em>mais simples</em> do que parece</h2>
+    </div>
+    <!-- Passo 2: texto genérico de propósito. Se quiser, detalhe aqui o primeiro passo real do Instituto (por exemplo, como é feita a indicação da psicóloga). -->
+    <ol class="steps">
+      <li>
+        <h3>Você chama no WhatsApp</h3>
+        <p>Um primeiro contato, sem compromisso, para dizer o que você está buscando.</p>
+      </li>
+      <li>
+        <h3>A equipe conversa com você</h3>
+        <p>Entendemos o seu momento e explicamos como funciona o atendimento, inclusive os planos e valores.</p>
+      </li>
+      <li>
+        <h3>Você começa o atendimento</h3>
+        <p>As sessões acontecem online, de onde você estiver, no ritmo que cabe na sua vida.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 9. PERGUNTAS FREQUENTES -->
+<section class="faq" id="duvidas">
+  <div class="container">
+    <div class="center">
+      <span class="eyebrow">Dúvidas frequentes</span>
+      <h2>O que mais <em>nos perguntam</em></h2>
+    </div>
+    <div class="faq-list">
+      <details>
+        <summary>A partir de quantos anos vocês atendem?</summary>
+        <p>Atendemos a partir dos 15 anos.</p>
+      </details>
+      <details>
+        <summary>Qual é o valor do acompanhamento?</summary>
+        <p>O valor varia de acordo com a profissional, e temos planos que se ajustam à sua realidade. Ao entrar em contato, a equipe explica as opções com calma.</p>
+      </details>
+      <details>
+        <summary>Os atendimentos são online?</summary>
+        <p>Sim, 100% online. Isso facilita o seu dia a dia, porque você não precisa se deslocar. O sigilo, a qualidade, o acolhimento e a profundidade são os mesmos de um atendimento presencial.</p>
+      </details>
+      <details>
+        <summary>A terapia online funciona mesmo?</summary>
+        <p>Sim. Estudos mostram que a terapia online pode ser tão eficaz quanto a presencial, com a comodidade e a segurança de estar onde você preferir.</p>
+      </details>
+      <details>
+        <summary>Vocês atendem só quem mora no Brasil?</summary>
+        <p>Não. Como o atendimento é online, você pode ser atendida de qualquer lugar do Brasil ou do mundo.</p>
+      </details>
+      <details>
+        <summary>O atendimento é só para mulheres, mães e gestantes?</summary>
+        <p>Não. Atendemos todas as pessoas a partir de 15 anos. Nossa equipe de psicólogas tem experiência e formação em diferentes áreas, para acolher diferentes demandas.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 10. CHAMADA FINAL -->
+<section class="final">
+  <div class="container">
+    <div class="final-box">
+      <span class="eyebrow">Próximo passo</span>
+      <h2>Você pode começar <em>por uma conversa</em></h2>
+      <p>Não precisa ter tudo resolvido, nem saber exatamente o que está sentindo. Basta começar.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20com%20o%20Instituto%20Vaz." target="_blank" rel="noopener">Quero falar com o Instituto Vaz</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/institutovaz.psicologia" target="_blank" rel="noopener">Conhecer o Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 11. RODAPÉ -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <a class="logo" href="#topo">
+          <span class="logo-mark" aria-hidden="true">IV</span>
+          <span class="logo-text"><b>VAZ</b><small>Instituto · Psicologia e Saúde</small></span>
+        </a>
+        <p class="about">Psicoterapia online a partir de 15 anos, com escuta cuidadosa para cada história.</p>
+      </div>
+      <div>
+        <h4>Navegue</h4>
+        <ul>
+          <li><a href="#sinais">Você se reconhece?</a></li>
+          <li><a href="#atendimentos">Atendimentos</a></li>
+          <li><a href="#equipe">Equipe</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="#duvidas">Dúvidas frequentes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5519984521538?text=Ol%C3%A1%21%20Vim%20pelo%20site%20e%20gostaria%20de%20conversar%20com%20o%20Instituto%20Vaz." target="_blank" rel="noopener">WhatsApp (19) 98452-1538</a></li>
+          <li><a href="https://www.instagram.com/institutovaz.psicologia" target="_blank" rel="noopener">@institutovaz.psicologia</a></li>
+          <li>Atendimento 100% online</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span>© 2026 Instituto Vaz | Psicologia e Saúde. Todos os direitos reservados.</span>
+      <span>Atendimento psicológico conforme o Código de Ética Profissional do Psicólogo e as normas do CFP/CRP.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
